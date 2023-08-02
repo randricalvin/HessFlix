@@ -18,19 +18,21 @@ const Page1 = () => {
   , [])
 
   return (
-    <div className="flex justify-center text-2xl">
-      <h1>Les films populaires</h1>
-      {PopularMovies.map((PopularMovie) => {
-        return (
-        <PopularMoviesList
-        key={PopularMovie.id}
-        title={PopularMovie.original_title}
-        description={PopularMovie.overview}
-        poster={PopularMovie.poster_path}
-        date={PopularMovie.release_date}
-        />
-        )
-      })}
+    <div className='w-screen'>
+      <h1 className="text-2xl flex justify-center">Les films populaires</h1>
+      <div className='flex justify-center flex-wrap gap-6'>
+        {PopularMovies.map((PopularMovie) => {
+          return (
+          <PopularMoviesList
+          key={PopularMovie.id}
+          title={PopularMovie.original_title}
+          description={PopularMovie.overview}
+          poster={PopularMovie.poster_path}
+          date={PopularMovie.release_date}
+          />
+          )
+        })}
+      </div>
 
     </div>
   )
