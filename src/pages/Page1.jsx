@@ -1,9 +1,40 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
+import axios from 'axios'
+import PopularMoviesList from '../components/PopularMoviesList'
 
 const Page1 = () => {
+  const [PopularMovies, setPopularMovies] = useState([])
+  console.log(PopularMovies)
+
+  useEffect(() => {
+    axios.get (`https://api.themoviedb.org/3/movie/popular?api_key=dad59cab8629a6421cbcfd2f134b4839`)
+    .then((res) => {
+      setPopularMovies(res.data.results)
+    })
+    .catch((error) => {
+      console.log(error)
+    })
+  }
+  , [])
+
   return (
-    <div className='bg-red-700'>Accueil modifié Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo perferendis impedit distinctio, similique nulla sunt eius voluptas modi nisi at quos corrupti, adipisci iusto? Laudantium excepturi maiores illum ea iste?
-    Delectus modi in ad ullam unde hiorum aperiam temporibus itaque. Iste, possimus expedita maiores facere placeat aspernatur soluta repellat rerum neque, asperiores, dolore est quas harum enim suscipit aut!</div>
+    <div className='w-screen'>
+      <h1 className="text-2xl flex justify-center">Les films populaires</h1>
+      <div className='flex justify-center flex-wrap gap-6'>
+        {PopularMovies.map((PopularMovie) => {
+          return (
+          <PopularMoviesList
+          key={PopularMovie.id}
+          title={PopularMovie.original_title}
+          description={PopularMovie.overview}
+          poster={PopularMovie.poster_path}
+          date={PopularMovie.release_date}
+          />
+          )
+        })}
+      </div>
+
+    </div>
   )
 }
 
