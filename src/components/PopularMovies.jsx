@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react'
 import axios from 'axios'
 import PopularMoviesList from '../components/PopularMoviesList'
 
-const Page1 = () => {
+const Home = () => {
   const [PopularMovies, setPopularMovies] = useState([])
   console.log(PopularMovies)
 
@@ -20,14 +20,14 @@ const Page1 = () => {
   return (
     <div className='w-screen'>
       <h1 className="text-2xl flex justify-center">Les films populaires</h1>
-      <div className='flex justify-center flex-wrap gap-6'>
+      <div className='flex justify-center flex-wrap gap-6 hover:z-0'>
         {PopularMovies.map((PopularMovie) => {
           return (
           <PopularMoviesList
           key={PopularMovie.id}
           title={PopularMovie.original_title}
           description={PopularMovie.overview}
-          poster={PopularMovie.poster_path}
+          poster={PopularMovie.backdrop_path}
           date={PopularMovie.release_date}
           />
           )
@@ -38,4 +38,4 @@ const Page1 = () => {
   )
 }
 
-export default Page1
+export default Home
