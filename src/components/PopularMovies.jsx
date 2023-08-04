@@ -18,20 +18,22 @@ const Home = () => {
   , [])
 
   return (
-    <div className='w-screen'>
-      <h1 className="text-2xl flex justify-center">Les films populaires</h1>
-      <div className='flex justify-center flex-wrap gap-6 hover:z-0'>
-        {PopularMovies.map((PopularMovie) => {
-          return (
-          <PopularMoviesList
-          key={PopularMovie.id}
-          title={PopularMovie.original_title}
-          description={PopularMovie.overview}
-          poster={PopularMovie.backdrop_path}
-          date={PopularMovie.release_date}
-          />
-          )
-        })}
+    <div className=''>
+      <h1 className="text-[#ffffff] font-extrabold text-xl flex mx-10 mt-8">Les films populaires</h1>
+      <div className='bg-red-500 w-full'>
+        <div className='flex '>
+          {PopularMovies.map((PopularMovie) => {
+            return (
+            <PopularMoviesList
+            key={PopularMovie.id}
+            title={PopularMovie.original_title}
+            description={PopularMovie.overview}
+            poster={PopularMovie.backdrop_path}
+            date={PopularMovie.release_date}
+            />
+            )
+          })}
+        </div>
       </div>
 
     </div>
