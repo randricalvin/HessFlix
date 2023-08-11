@@ -20,8 +20,8 @@ const Home = () => {
   return (
     <div className=''>
       <h1 className="text-[#ffffff] font-extrabold text-xl flex mx-10 mt-8">Les films populaires</h1>
-      <div className='bg-red-500 w-full'>
-        <div className='flex '>
+      <div className='bg-red-500'>
+        <div className='flex'>
           {PopularMovies.map((PopularMovie) => {
             return (
             <PopularMoviesList
