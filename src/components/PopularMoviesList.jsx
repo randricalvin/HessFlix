@@ -15,6 +15,10 @@ const PopularMoviesList = (
             <img className="overflow-hidden " src={`https://image.tmdb.org/t/p/original/${poster}`} alt={title} />
           </div>
       </div>
+      <div>
+        {/* ajouter une paragraphe de titre en rouge */}
+
+      </div>
 </div>
 
 
