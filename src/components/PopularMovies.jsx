@@ -2,12 +2,13 @@ import React, {useEffect, useState} from 'react'
 import axios from 'axios'
 import PopularMoviesList from '../components/PopularMoviesList'
 
+
 const Home = () => {
   const [PopularMovies, setPopularMovies] = useState([])
   console.log(PopularMovies)
 
   useEffect(() => {
-    axios.get (`https://api.themoviedb.org/3/movie/popular?api_key=dad59cab8629a6421cbcfd2f134b4839`)
+    axios.get (`https://api.themoviedb.org/3/movie/popular?api_key=dad59cab8629a6421cbcfd2f134b4839&language=fr-FR&page=1`)
     .then((res) => {
       setPopularMovies(res.data.results)
     })
