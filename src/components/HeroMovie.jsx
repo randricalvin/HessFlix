@@ -8,8 +8,6 @@ import { Link } from 'react-router-dom'
 const HeroMovie = () => {
     const [HeroMovie, setHeroMovie] = useState([614479])
     const [movieId, setMovieId] = useState(614479)
-    console.log(HeroMovie)
-    console.log(movieId)
 
 
 // find the movie with this id 614479

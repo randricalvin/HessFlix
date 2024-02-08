@@ -20,26 +20,22 @@ const Home = () => {
 
   return (
     <div className=''>
-      <h1 className="text-[#ffffff] font-extrabold text-xl flex mx-10 mt-8">Les films populaires</h1>
-      <div className=''>
-        <div className=''>
-          <div className="" >
-            <img />
-              {PopularMovies.map((PopularMovie) => {
-                return (
+        <h1 className="text-[#ffffff] font-extrabold text-2xl flex mx-10 py-2">Les films populaires</h1>
+
+        <div className='flex overflow-x-scroll'>
+          {PopularMovies.map((PopularMovie) => {
+            return (
                 <PopularMoviesList
                 key={PopularMovie.id}
+                id={PopularMovie.id}
                 title={PopularMovie.original_title}
                 description={PopularMovie.overview}
                 poster={PopularMovie.poster_path}
                 date={PopularMovie.release_date}
                 />
-                )
-              })}
-          </div>
+            )
+          })}
         </div>
-      </div>
-
     </div>
   )
 }

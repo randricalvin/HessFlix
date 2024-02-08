@@ -15,3 +15,8 @@ body {
   opacity: 1;
   transform: translateY(-50%);
 }
+
+.card {
+  width: 100vw;
+  display: flex;
+}

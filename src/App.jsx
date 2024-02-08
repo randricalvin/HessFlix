@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
 import NavBar from './components/NavBar'
 import './App.css'
-import PopularMoviesList from './components/PopularMoviesList'
+import PopularMovieDetail from './components/PopularMovieDetail'
 
 function App() {
 
@@ -13,7 +13,7 @@ function App() {
         <NavBar />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/popular-movie/:id" element={<PopularMoviesList />} />
+          <Route path="/popular-movie/:id" element={<PopularMovieDetail />} />
         </Routes>
       </Router>
     </div>

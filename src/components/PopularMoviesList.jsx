@@ -10,25 +10,13 @@ const PopularMoviesList = (
     ) => {
 
   return (
-<div className='shadow-lg bg-blue-500'>
-      {/* <div data-aos="fade-up" data-aos-anchor-placement="top-bottom" className=''>
-          <div className="ease-in-out hover:scale-105 duration-300">
-            <Link to={`/popular-movie/${id}`}>
-              <img className="overflow-hidden " src={`https://image.tmdb.org/t/p/original/${poster}`} alt={title} />
-            </Link>
-          </div>
-      </div> */}
-      
-
-  <div class="">
-    <Link to={`/popular-movie/${id}`}>
-            <img class=" object-cover" src={`https://image.tmdb.org/t/p/original/${poster}`} alt={title} />
-    </Link>
+    <div className="mx-2">
+      <div className="rounded-lg shadow w-80 hover:">
+        <Link to={`/popular-movie/${id}`}>
+          <img className="rounded-t-lg w-80 h-40 object-cover transition duration-300 ease-in-out hover:scale-105" src={`https://image.tmdb.org/t/p/w500/${poster}`} alt={title} />
+        </Link>
   </div>
-
-</div>
-
-    
+  </div>
   )
 }
 
