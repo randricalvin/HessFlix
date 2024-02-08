@@ -30,7 +30,7 @@ const Home = () => {
                 id={PopularMovie.id}
                 title={PopularMovie.original_title}
                 description={PopularMovie.overview}
-                poster={PopularMovie.poster_path}
+                poster={PopularMovie.backdrop_path}
                 date={PopularMovie.release_date}
                 />
             )
