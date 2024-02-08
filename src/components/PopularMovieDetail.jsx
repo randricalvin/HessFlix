@@ -26,6 +26,7 @@ const PopularMovieDetail = () => {
             <img src={`https://image.tmdb.org/t/p/w500${PopularMovieDetail.poster_path}`} alt={PopularMovieDetail.title}/>
             <h2>{PopularMovieDetail.title}</h2>
             <p>{PopularMovieDetail.overview}</p>
+            <p>{PopularMovieDetail.release_date}</p>
         </div>
     </div>
   )
