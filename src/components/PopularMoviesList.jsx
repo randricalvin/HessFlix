@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const PopularMoviesList = (
     {id,
@@ -9,20 +10,13 @@ const PopularMoviesList = (
     ) => {
 
   return (
-<div className='shadow-lg '>
-      <div data-aos="fade-up" data-aos-anchor-placement="top-bottom" className=''>
-          <div className="ease-in-out hover:scale-105 duration-300">
-            <img className="overflow-hidden " src={`https://image.tmdb.org/t/p/original/${poster}`} alt={title} />
-          </div>
-      </div>
-      <div>
-        {/* ajouter une paragraphe de titre en rouge */}
-
-      </div>
-</div>
-
-
-    
+    <div className="mx-2">
+      <div className="rounded-lg shadow w-80 hover:">
+        <Link to={`/popular-movie/${id}`}>
+          <img className="rounded-t-lg w-80 h-40 object-cover transition duration-300 ease-in-out hover:scale-105" src={`https://image.tmdb.org/t/p/w500/${poster}`} alt={title} />
+        </Link>
+  </div>
+  </div>
   )
 }
 
