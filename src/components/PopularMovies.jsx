@@ -22,7 +22,7 @@ const Home = () => {
     <div className=''>
         <h1 className="text-[#ffffff] font-extrabold text-2xl flex mx-10 py-2">Les films populaires</h1>
 
-        <div className='flex overflow-x-scroll'>
+        <div className='flex overflow-x-scroll no-scrollbar pb-10'>
           {PopularMovies.map((PopularMovie) => {
             return (
                 <PopularMoviesList
@@ -30,7 +30,7 @@ const Home = () => {
                 id={PopularMovie.id}
                 title={PopularMovie.original_title}
                 description={PopularMovie.overview}
-                poster={PopularMovie.poster_path}
+                poster={PopularMovie.backdrop_path}
                 date={PopularMovie.release_date}
                 />
             )
