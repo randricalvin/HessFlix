@@ -3,6 +3,7 @@ import PopularMovies from '../components/PopularMovies'
 import HeroMovie from '../components/HeroMovie'
 import TrendingMovies from '../components/TrendingMovies'
 import UpcomingMovies from '../components/UpcomingMovies'
+import TopRatedMovies from '../components/TopRatedMovies'
 
 const Home = () => {
   return (
@@ -11,6 +12,7 @@ const Home = () => {
       <PopularMovies />
       <TrendingMovies />
       <UpcomingMovies />
+      <TopRatedMovies />
     </div>
   )
 }
