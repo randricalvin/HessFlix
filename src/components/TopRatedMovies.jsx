@@ -20,7 +20,7 @@ const TopRatedMovies = () => {
     <div className=''>
         <h1 className="text-[#ffffff] font-extrabold text-2xl flex mx-10 py-10">Les films les plus aimés</h1>
 
-        <div className='flex overflow-x-scroll'>
+        <div className='flex overflow-x-scroll no-scrollbar'>
             {topRatedMovies.map((topRatedMovie) => {
                 return (
                     <TopRatedMoviesList

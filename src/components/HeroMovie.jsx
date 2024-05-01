@@ -17,6 +17,7 @@ useEffect(() => {
     axios.get (`https://api.themoviedb.org/3/movie/${HeroMovie}?api_key=dad59cab8629a6421cbcfd2f134b4839`)
     .then((res) => {
       setHeroMovie(res.data)
+      console.log(res.data)
     })
     .catch((error) => {
       console.log(error)
@@ -28,6 +29,7 @@ useEffect(() => {
         axios.get (`https://api.themoviedb.org/3/movie/${movieId}/videos?language=en-US&api_key=dad59cab8629a6421cbcfd2f134b4839`)
         .then((res) => {
             setMovieId(res.data.results[0])
+            console.log(res.data.results[0])
         })
         .catch((error) => {
             console.log(error)

@@ -20,7 +20,7 @@ const TrendingMovies = () => {
     <div className=''>
         <h1 className="text-[#ffffff] font-extrabold text-2xl flex mx-10 py-10">Les tendances de la semaine</h1>
 
-        <div className='flex overflow-x-scroll'>
+        <div className='flex overflow-x-scroll no-scrollbar'>
             {trendingMovies.map((trendingMovie) => {
                 return (
                     <TrendingMoviesList

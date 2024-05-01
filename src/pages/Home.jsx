@@ -7,7 +7,7 @@ import TopRatedMovies from '../components/TopRatedMovies'
 
 const Home = () => {
   return (
-    <div>
+    <div className=''>
       <HeroMovie />
       <PopularMovies />
       <TrendingMovies />
