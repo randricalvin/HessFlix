@@ -4,6 +4,7 @@ import Home from './pages/Home'
 import NavBar from './components/NavBar'
 import './App.css'
 import PopularMovieDetail from './components/PopularMovieDetail'
+import Footer from './components/Footer'
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/popular-movie/:id" element={<PopularMovieDetail />} />
         </Routes>
+        <Footer />
       </Router>
     </div>
   )
